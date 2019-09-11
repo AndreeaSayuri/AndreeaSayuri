@@ -1,0 +1,26 @@
+	public static boolean isPalindrom(String x) {
+		boolean isPalindrom = true;
+		x = x.replace(" ", "");           
+		x = x.toLowerCase();              
+		char[] y = x.toCharArray();
+		int size = y.length;
+		
+		for (int i = 0; i < size; i++) {
+			if (y[i] == y[size - 1 - i]) { 
+				continue;				   
+			} else {
+				isPalindrom = false;
+				break;
+			}
+		} return isPalindrom;
+		}
+
+	
+
+	public static void main(String[] args) {
+		
+		
+		
+		String str = "Too hot to Hoott";
+		System.out.print("The string is " + (isPalindrom(str)? "a": "not a") + " palindrom.");
+	}
