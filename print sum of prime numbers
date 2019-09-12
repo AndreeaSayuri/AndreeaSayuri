@@ -1,0 +1,27 @@
+	public static boolean isPrime(int n) {
+		if (n < 2) {
+			return false;
+		}
+		for(int i = 2; i < n; i++) {
+			if (n % i == 0) {
+				return false;
+			} 
+		}
+		return true;
+	}
+
+	public static void printPrimeSumSequence(int limit) {
+		int sum = 0;
+
+		for (int i = 2; ; i++) {
+			if (isPrime(i)) {
+				sum += i;
+				if (sum <= limit) {
+					System.out.print(sum + " ");
+				} else {
+					break;
+				}  
+			} 
+		} 
+
+	}
