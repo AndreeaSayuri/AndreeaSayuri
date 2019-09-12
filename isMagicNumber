@@ -1,0 +1,15 @@
+public static boolean isMagic(int n) {
+		while(n > 9) {
+			int sum = 0;
+			while (n > 0) {
+				int uC = n % 10;
+				n = n / 10;
+				sum += uC;
+			}
+			n = sum;
+		}
+		if (n == 3 || n == 7 || n == 9 ) {
+			return true;
+		} 
+		return false;
+	}
