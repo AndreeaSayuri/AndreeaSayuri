@@ -1,0 +1,23 @@
+	
+		public static int possibleFriend (int n) {
+			int sum = 0;
+			
+			
+			for (int i = 1; i <= n/2; i++) {
+				if (n % i == 0) {
+					sum += i;
+				}
+				
+			} return sum;
+		}
+		
+		public static void printAllAmicableNumbers(int lower, int upper) {
+			
+		for (int i = lower; i < upper; i++ ) {
+			if ( possibleFriend(i) == possibleFriend(possibleFriend(possibleFriend(i)))){
+				if (possibleFriend(i) != i && i < possibleFriend(i) )
+				System.out.println(possibleFriend(i) + "->" + possibleFriend(possibleFriend(i)));
+			}
+					
+		}
+	}
