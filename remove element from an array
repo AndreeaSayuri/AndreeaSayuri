@@ -1,0 +1,12 @@
+public static void removeElement(int[] array, int key) {
+		int[] newArray = new int[array.length -1];
+		int newIndex = 0;
+		for (int i=0; i<array.length; i++) {
+			if (array[i] != key) {
+				newArray[newIndex] = array[i];
+				
+				System.out.println(newArray[newIndex]);
+				newIndex++;
+			}
+		}
+	}
