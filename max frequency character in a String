@@ -1,0 +1,25 @@
+	public static void maxFrequency(String str) {
+		str = str.toLowerCase().replace(" ", "");
+		int max = 0;
+
+		for(int i = 0; i < str.length(); i++){
+			int counter = 1;
+			for(int j = i + 1; j < str.length(); j++) {
+				if (str.charAt(i) == str.charAt(j)){
+					counter++;
+				}
+			} if (max < counter) {
+				max = counter;
+			}
+		}  
+		for(int i = 0; i < str.length(); i ++) {
+			int counter = 1;
+			for(int j = i + 1; j < str.length(); j++){
+				if (str.charAt(i) == str.charAt(j)){
+					counter++;
+				}
+			} if(max == counter) {
+				System.out.println("Most frequent character is '" + str.charAt(i) + "', it appears " + max + " times");
+			}
+		}
+	}
