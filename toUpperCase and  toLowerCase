@@ -2,15 +2,14 @@
 		String newString = "";
 		char[] strCharArray = str.toCharArray();
 		int size = strCharArray.length;
-		char[] newCharArray = new char[size];
 		for (int i =0; i < size; i++) {
 				if (strCharArray[i] >=0 && strCharArray[i] <= 90) {
-					newCharArray[i] = strCharArray[i];
+					strCharArray[i] = strCharArray[i];
 				} else if (strCharArray[i] >=97 && strCharArray[i] <= 122) {
-					newCharArray[i] = (char) (strCharArray[i] - 32);
+					strCharArray[i] = (char) (strCharArray[i] - 32);
 				} 
 			}	
-		newString = String.valueOf(newCharArray);
+		newString = String.valueOf(strCharArray);
 		return newString;
 }
 	
@@ -18,16 +17,15 @@
 		String newString= "";
 		char[] strCharArray = str.toCharArray();
 		int size = strCharArray.length;
-		char[] newCharArray = new char[size];
 		for(int i = 0; i < size; i++) {
 			if (strCharArray[i]>= 65 && strCharArray[i] <= 90) {
-				newCharArray[i] = (char) (strCharArray[i] + 32);
+				strCharArray[i] = (char) (strCharArray[i] + 32);
 			} else if (strCharArray[i] >= 0 && strCharArray[i] <= 64) {
-				newCharArray[i] = strCharArray[i];
+				strCharArray[i] = strCharArray[i];
 			} else if(strCharArray[i] >= 97 && strCharArray[i] <= 122) {
-				newCharArray[i] = strCharArray[i];
+				strCharArray[i] = strCharArray[i];
 			}
-		} newString = String.valueOf(newCharArray);
+		} newString = String.valueOf(strCharArray);
 		return newString;
 	}
 	
