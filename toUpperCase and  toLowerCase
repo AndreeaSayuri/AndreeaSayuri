@@ -3,12 +3,12 @@
 		char[] strCharArray = str.toCharArray();
 		int size = strCharArray.length;
 		for (int i =0; i < size; i++) {
-				if (strCharArray[i] >=0 && strCharArray[i] <= 90) {
-					strCharArray[i] = strCharArray[i];
-				} else if (strCharArray[i] >=97 && strCharArray[i] <= 122) {
-					strCharArray[i] = (char) (strCharArray[i] - 32);
-				} 
-			}	
+			if (strCharArray[i] >=0 && strCharArray[i] <= 90) {
+				strCharArray[i] = strCharArray[i];
+			} else if (strCharArray[i] >=97 && strCharArray[i] <= 122) {
+				strCharArray[i] = (char) (strCharArray[i] - 32);
+			} 
+		}	
 		newString = String.valueOf(strCharArray);
 		return newString;
 }
